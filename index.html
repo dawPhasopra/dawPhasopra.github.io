@@ -1,24 +1,159 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>แนะนำตัวเอง</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - ดาว ภาโสพระ</title>
+  <style>
+    /* ฟอนต์ไทย */
+    @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Prompt', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e0f7fa, #cce3ff);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #ffffffdd;
+      backdrop-filter: blur(10px);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #0077b6;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .intro {
+      max-width: 700px;
+    }
+
+    .intro h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .button-group a {
+      padding: 15px 30px;
+      background-color: #0077b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .button-group a:hover {
+      background-color: #005f87;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .intro h2 {
+        font-size: 28px;
+      }
+
+      .button-group a {
+        font-size: 14px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <img src="https://via.placeholder.com/150" alt="รูปโปรไฟล์" class="profile-img">
-      <h1>สวัสดีครับ/ค่ะ 👋</h1>
-      <h2>ชื่อ: ดาว ภาโสพระ</h2>
-      <p>สาขา: เทคโนโลยีสารสนเทศ</p>
-      <p>มหาวิทยาลัยกาฬสินธุ์</p>
-      <p>ความสนใจ: พัฒนาเว็บไซต์ 💻, การออกแบบ 🎨, AI 🤖</p>
-      <button onclick="sayHi()">คลิกทักทาย</button>
-    </div>
-  </div>
 
-  <script src="script.js"></script>
+  <!-- ส่วนหัวเว็บ -->
+  <header>
+    <h1>Portfolio ดาว ภาโสพระ</h1>
+    <nav>
+      <a href="#">หน้าแรก</a>
+      <a href="#portfolio">ผลงาน</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <!-- เนื้อหาหลัก -->
+  <main>
+    <div class="intro">
+      <h2>สวัสดีค่ะ 👋</h2>
+      <p>ฉันชื่อ <strong>ดาว ภาโสพระ</strong> นักศึกษาสาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยกาฬสินธุ์<br>
+        สนใจสมัครงานในตำแหน่ง Front-End Developer / UX/UI Designer</p>
+      <p>ด้านล่างนี้คือ Portfolio ที่จัดเตรียมเฉพาะสำหรับบริษัทที่ฉันอยากร่วมงานด้วย ✨</p>
+    </div>
+
+    <!-- ปุ่มเข้าดู Portfolio -->
+    <div class="button-group" id="portfolio">
+      <a href="portfolio-company-a.html">📁 สำหรับบริษัท A</a>
+      <a href="portfolio-company-b.html">📁 สำหรับบริษัท B</a>
+      <a href="portfolio-company-c.html">📁 สำหรับบริษัท C</a>
+    </div>
+  </main>
+
+  <!-- ส่วนท้ายเว็บ -->
+  <footer id="contact">
+    ติดต่อ: daopaso@example.com | โทร: 080-000-0000 <br>
+    &copy; 2025 ดาว ภาโสพระ. All rights reserved.
+  </footer>
+
 </body>
 </html>
